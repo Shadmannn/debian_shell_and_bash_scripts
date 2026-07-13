@@ -35,3 +35,30 @@ chmod +x keyboard-reset.sh
 sudo ./keyboard-reset.sh
 ```
 ### You don't have to run this every time! Just run this and this problem will be gone. If not, run it again.
+
+---
+
+## 2. up.sh 
+
+**Complete system update script for Debian-based systems**
+
+**What it does:**
+- Updates package lists
+- Upgrades all installed packages
+- Removes unnecessary packages
+- Cleans the package cache
+
+**Why use this?** Instead of typing 4 separate commands every time, just run one script!
+
+---
+
+## How to Run It
+
+### Step 1: Make the script executable
+```bash
+chmod +x up.sh
+```
+### Step 2: Run the script
+```bash
+./up.sh
+```
