@@ -1,4 +1,4 @@
-# Collection of useful shell scripts for Linux systems.
+# Collection of useful shell/bash scripts for Linux systems.
 
 ---
 
