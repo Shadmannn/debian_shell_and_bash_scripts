@@ -1,4 +1,7 @@
 #!/bin/sh
+
+#Please read README if you dont know the usage of this shell script
+
 case $1/$2 in
   pre/*)
     echo i8042 > /sys/bus/platform/drivers/i8042/unbind
