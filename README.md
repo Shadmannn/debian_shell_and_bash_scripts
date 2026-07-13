@@ -1,4 +1,4 @@
-## Collection of useful shell scripts for Linux systems.
+# Collection of useful shell scripts for Linux systems.
 
 ---
 
@@ -8,7 +8,7 @@ I created this repository to share useful shell scripts that solve common Linux 
 
 ---
 
-# 1. keyboard-reset.sh
+## 1. keyboard-reset.sh
 
 **Works in every Linux distro!**
 
