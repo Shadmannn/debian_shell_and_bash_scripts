@@ -23,13 +23,7 @@ When you close your laptop lid or put it to sleep, the built-in keyboard sometim
 
 ---
 
-## ✅ The Solution
-
-This script forces the keyboard driver to reset by unbinding and rebinding it. This forces the kernel to reinitialize the keyboard without restarting the whole system.
-
----
-
-## 🚀 How to Run It
+## How to Run It
 
 ### Step 1: Make the script executable
 ```bash
