@@ -1,3 +1,13 @@
+Collection of useful shell scripts for Linux systems.
+
+---
+
+## Why This Repository?
+
+I created this repository to share useful shell scripts that solve common Linux problems. Instead of searching for solutions every time, I keep all my scripts in one place.
+
+---
+
 # 1. keyboard-reset.sh
 
 **Works in every Linux distro!**
@@ -6,7 +16,7 @@
 
 ---
 
-## ❌ The Problem
+## The Problem
 
 When you close your laptop lid or put it to sleep, the built-in keyboard sometimes stops working after waking up.
 
