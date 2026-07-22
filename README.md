@@ -75,7 +75,7 @@ chmod +x up.sh
 
 ---
 
-## 3. runner.sh
+## 3. run.sh
 
 **Interactive compilation and execution script for multi-language projects**
 
@@ -103,10 +103,10 @@ chmod +x up.sh
 ### Step 1: Make the script executable
 
 ```bash
-chmod +x runner.sh
+chmod +x run.sh
 ```
 ### Step 2: Run the script
 
 ```bash
-./runner.sh
+./run.sh
 ```
