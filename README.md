@@ -72,3 +72,41 @@ chmod +x up.sh
 ```bash
 ./up.sh
 ```
+
+---
+
+## 3. runner.sh
+
+**Interactive compilation and execution script for multi-language projects**
+
+**Works in every Linux distro!**
+
+**What it does:**
+
+* Prompts for directory location (e.g, From Dolphin Manager in KDE Plasma), file name, language, and compiler
+* Supports Java, C, C++, and Python with sensible default compilers
+* Handles automatic compilation and execution in a single step
+* Validates directory paths and file existence to prevent runtime errors
+
+**Why use this?** Instead of manually switching directories, compiling files, and executing binaries with separate commands, just run one script!
+
+### How to copy directory paths from File Managers:
+
+- **Terminal:** Run `pwd` to print and copy your current directory path.
+- **Nautilus (GNOME):** Press `Ctrl + L` to highlight the address bar, then `Ctrl + C` to copy the path.
+- **Dolphin (KDE Plasma):** Press `Ctrl + L` to copy the address bar path, or right-click a folder and select **Copy Location** (`Ctrl + Alt + C`).
+
+---
+
+## How to Run It
+
+### Step 1: Make the script executable
+
+```bash
+chmod +x runner.sh
+```
+### Step 2: Run the script
+
+```bash
+./runner.sh
+```
