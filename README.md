@@ -83,7 +83,7 @@ chmod +x up.sh
 
 **What it does:**
 
-* Prompts for directory location (e.g, From Dolphin Manager in KDE Plasma), file name, language, and compiler
+* Prompts for directory location, file name, language, and compiler
 * Supports Java, C, C++, and Python with sensible default compilers
 * Handles automatic compilation and execution in a single step
 * Validates directory paths and file existence to prevent runtime errors
