@@ -35,7 +35,7 @@ When you close your laptop lid or put it to sleep, the built-in keyboard sometim
 
 ## How to Run It
 
-### Step 1: Make the script executable
+### Step 1: Make the script executable (first time only)
 ```bash
 chmod +x keyboard-reset.sh
 ```
@@ -64,7 +64,7 @@ sudo ./keyboard-reset.sh
 
 ## How to Run It
 
-### Step 1: Make the script executable
+### Step 1: Make the script executable (first time only)
 ```bash
 chmod +x up.sh
 ```
@@ -100,7 +100,7 @@ chmod +x up.sh
 
 ## How to Run It
 
-### Step 1: Make the script executable
+### Step 1: Make the script executable (first time only)
 
 ```bash
 chmod +x run.sh
