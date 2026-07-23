@@ -40,26 +40,43 @@ case $LANG_CHOICE in
     1) # Java
         read -rp "Enter Java compiler [default: javac]: " COMPILER
         COMPILER=${COMPILER:-javac}
-        
+
         # Extract class name (filename without extension)
         CLASS_NAME="${FILE_NAME%.*}"
-        
+
+        # Check if file has a package declaration
+        PKG_NAME=$(grep -E '^\s*package\s+' "$FILE_NAME" | sed -E 's/^\s*package\s+([^;]+);.*/\1/' | xargs)
+
         echo "Compiling with $COMPILER..."
-        if $COMPILER "$FILE_NAME"; then
-            echo "Compilation successful. Running..."
-            echo -e "----------------------------------------\n"
-            java "$CLASS_NAME"
+
+        if [ -n "$PKG_NAME" ]; then
+            # Handles package compiling and running from root directory
+            if $COMPILER *.java; then
+                echo "Compilation successful. Running..."
+                echo -e "----------------------------------------\n"
+                cd ..
+                java "$PKG_NAME.$CLASS_NAME"
+            else
+                echo "Compilation failed."
+            fi
         else
-            echo "Compilation failed."
+            # Standard execution if no package is present
+            if $COMPILER *.java; then
+                echo "Compilation successful. Running..."
+                echo -e "----------------------------------------\n"
+                java "$CLASS_NAME"
+            else
+                echo "Compilation failed."
+            fi
         fi
         ;;
 
     2) # C
         read -rp "Enter C compiler [default: gcc]: " COMPILER
         COMPILER=${COMPILER:-gcc}
-        
+
         OUT_NAME="${FILE_NAME%.*}.out"
-        
+
         echo "Compiling with $COMPILER..."
         if $COMPILER "$FILE_NAME" -o "$OUT_NAME"; then
             echo "Compilation successful. Running..."
@@ -73,9 +90,9 @@ case $LANG_CHOICE in
     3) # C++
         read -rp "Enter C++ compiler [default: g++]: " COMPILER
         COMPILER=${COMPILER:-g++}
-        
+
         OUT_NAME="${FILE_NAME%.*}.out"
-        
+
         echo "Compiling with $COMPILER..."
         if $COMPILER "$FILE_NAME" -o "$OUT_NAME"; then
             echo "Compilation successful. Running..."
@@ -89,7 +106,7 @@ case $LANG_CHOICE in
     4) # Python
         read -rp "Enter Python interpreter [default: python3]: " INTERPRETER
         INTERPRETER=${INTERPRETER:-python3}
-        
+
         echo "Executing with $INTERPRETER..."
         echo -e "----------------------------------------\n"
         $INTERPRETER "$FILE_NAME"
